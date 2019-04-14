@@ -46,7 +46,7 @@ public class MovieController {
     }
 
     @PutMapping("/movie/{id}")
-    public void updateUser(@PathVariable String id, @RequestBody Movie movie) {
+    public void updateMovie(@PathVariable String id, @RequestBody Movie movie) {
         movieService.updateMovie(id, movie.getName());
     }
 
