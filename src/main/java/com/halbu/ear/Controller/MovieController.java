@@ -18,11 +18,6 @@ public class MovieController {
         this.movieService = movieService;
     }
 
-    @RequestMapping("/")
-    public String index() {
-        return "Hello World";
-    }
-
     @RequestMapping("/movie")
     public List<Movie> getAllMovie() {
         return movieService.getAllMovies();

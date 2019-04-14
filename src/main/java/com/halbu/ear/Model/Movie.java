@@ -4,6 +4,7 @@ package com.halbu.ear.Model;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "movie_entity")
@@ -22,6 +23,13 @@ public class Movie {
     private String language;
     @Column(name = "declaration")
     private String declaration;
+
+    @ManyToMany(cascade=CascadeType.ALL)
+    @JoinTable(
+    name = "movieofactor",
+    joinColumns = @JoinColumn(name = "movie_id"),
+    inverseJoinColumns = @JoinColumn(name = "id"))
+    Set<Actor> movieofactor;
 
     public Movie(String  movie_id,String name,int publishdate,String type,String language,String declaration){
         this.movie_id=movie_id;

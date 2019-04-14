@@ -1,12 +1,16 @@
 package com.halbu.ear.Service;
 
+import com.halbu.ear.Model.Actor;
 import com.halbu.ear.Model.Movie;
+import com.halbu.ear.Repository.ActorRepository;
 import com.halbu.ear.Repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class MovieService {
@@ -36,4 +40,5 @@ public class MovieService {
     public void deleteMovie(String id) {
         movieRepository.deleteById(id);
     }
+    
 }

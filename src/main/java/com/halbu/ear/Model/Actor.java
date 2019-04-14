@@ -3,10 +3,8 @@ package com.halbu.ear.Model;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "actor_entity")
@@ -18,6 +16,9 @@ public class Actor {
     private String id;
     private String firstname;
     private String lastname;
+
+    @ManyToMany(mappedBy = "movieofactor")
+    Set<Movie> movieofactor;
 
     public Actor(String id,String firstname,String lastname){
         this.id = id;
