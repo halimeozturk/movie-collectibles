@@ -1,9 +1,9 @@
-package com.halbu.ear.Controller;
+package com.movie.Controller;
 
 
-import com.halbu.ear.Model.User;
-import com.halbu.ear.Service.UserService;
-import com.halbu.ear.helper.Response;
+import com.movie.Model.User;
+import com.movie.Service.UserService;
+import com.movie.helper.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

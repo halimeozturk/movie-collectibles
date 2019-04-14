@@ -1,4 +1,4 @@
-package com.halbu.ear.Model;
+package com.movie.Model;
 
 
 import org.hibernate.annotations.GenericGenerator;
@@ -17,8 +17,8 @@ public class Actor {
     private String firstname;
     private String lastname;
 
-    @ManyToMany(mappedBy = "movieofactor")
-    Set<Movie> movieofactor;
+    @ManyToMany(mappedBy = "actorOfMovie")
+    Set<Movie> movieOfActor;
 
     public Actor(String id,String firstname,String lastname){
         this.id = id;

@@ -1,4 +1,4 @@
-package com.halbu.ear.Model;
+package com.movie.Model;
 
 import org.hibernate.annotations.GenericGenerator;
 

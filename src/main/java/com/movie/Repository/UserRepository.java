@@ -1,6 +1,6 @@
-package com.halbu.ear.Repository;
+package com.movie.Repository;
 
-import com.halbu.ear.Model.User;
+import com.movie.Model.User;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

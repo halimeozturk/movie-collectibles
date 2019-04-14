@@ -1,4 +1,4 @@
-package com.halbu.ear.Model;
+package com.movie.Model;
 
 
 import org.hibernate.annotations.GenericGenerator;
@@ -12,7 +12,7 @@ public class Movie {
 
     @Id @GeneratedValue(generator="system-uuid")
     @GenericGenerator(name="system-uuid", strategy = "uuid")
-    private String movie_id;
+    private String id;
     @Column(name = "name")
     private String name;
     @Column(name = "publishdate")
@@ -26,13 +26,13 @@ public class Movie {
 
     @ManyToMany(cascade=CascadeType.ALL)
     @JoinTable(
-    name = "movieofactor",
+    name = "actors",
     joinColumns = @JoinColumn(name = "movie_id"),
-    inverseJoinColumns = @JoinColumn(name = "id"))
-    Set<Actor> movieofactor;
+    inverseJoinColumns = @JoinColumn(name = "actor_id"))
+    Set<Actor> actorOfMovie;
 
     public Movie(String  movie_id,String name,int publishdate,String type,String language,String declaration){
-        this.movie_id=movie_id;
+        this.id=movie_id;
         this.name=name;
         this.publishdate=publishdate;
         this.type=type;
@@ -44,11 +44,11 @@ public class Movie {
 
 
     public String getMovie_id() {
-        return movie_id;
+        return id;
     }
 
     public void setMovie_id(String movie_id) {
-        this.movie_id = movie_id;
+        this.id = movie_id;
     }
 
     public String getName() {

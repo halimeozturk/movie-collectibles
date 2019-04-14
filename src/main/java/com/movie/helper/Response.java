@@ -1,4 +1,4 @@
-package com.halbu.ear.helper;
+package com.movie.helper;
 
 public class Response {
 

@@ -1,7 +1,7 @@
-package com.halbu.ear.Service;
+package com.movie.Service;
 
-import com.halbu.ear.Model.User;
-import com.halbu.ear.Repository.UserRepository;
+import com.movie.Model.User;
+import com.movie.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

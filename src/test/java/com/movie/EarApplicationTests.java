@@ -1,4 +1,4 @@
-package com.halbu.ear;
+package com.movie;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

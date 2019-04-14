@@ -1,14 +1,12 @@
-package com.halbu.ear.Repository;
+package com.movie.Repository;
 
 
-import com.halbu.ear.Model.Actor;
+import com.movie.Model.Actor;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-
-import javax.sql.rowset.CachedRowSet;
 
 @Repository
 public interface ActorRepository extends CrudRepository<Actor,String> {
