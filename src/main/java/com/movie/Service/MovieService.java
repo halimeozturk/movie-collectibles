@@ -15,9 +15,9 @@ public class MovieService {
     private MovieRepository movieRepository;
 
     public List<Movie> getAllMovies() {
-        List<Movie> users = new ArrayList<>();
-        movieRepository.findAll().forEach(users::add);
-        return users;
+        List<Movie> movie = new ArrayList<>();
+        movieRepository.findAll().forEach(movie::add);
+        return movie;
     }
 
     public void addMovie(Movie movie) {
